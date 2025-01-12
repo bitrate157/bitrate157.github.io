@@ -1,34 +1,151 @@
-body {
+
+/*Main body classes*/ 
+
+html, body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  height: 100%;
+  background: linear-gradient(to bottom, #E4CCFF, #BDE3FF);
+  background-size: cover; /* Ensures the gradient covers the full screen */
+  background-attachment: fixed; /* Optional, for smoother scrolling */
 }
 
-header {
-  background-color: #333;
+/* Flex container for the entire page */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* The main content should take up the remaining space */
+.content {
+  flex: 1;
+}
+
+/* Header styles */
+.header {
+  position: relative;
+  height: 300px; /* Adjust as needed */
+  background-image: url('head\ banner.png'); /* Replace with your image path */
+  background-position: right center; /* Align the image to the right */
+  background-size: cover; /* Ensure the image covers the header */
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Text container */
+.text-header-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
   color: white;
-  padding: 10px 0;
+  padding-left: 20px;
+}
+
+/* Styling for text lines */
+.big-text-header {
+  font-size: 48px;
+  margin-bottom: 5px;
+  display: inline-flex;
+  align-items: center; /* Aligns pills vertically */
+}
+
+.small-text-header {
+  font-size: 24px;
+}
+
+/* Skills container to the right of h1 */
+.skills-header-container {
+  display: flex;
+  align-items: center; /* Centers "+" sign vertically between the pills */
+  justify-content: flex-start;
+  gap: 5px;
+  margin-left: 10px; /* Adds some space between the text and pills */
+  position: relative;
+  top: -50px; /* Moves the pills 50px up */
+}
+
+/* Styling for "+" sign */
+.plus-sign {
+  font-size: 16px;
+  color: white;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .text-header-container {
+    top: 100px;
+    left: 20px;
+    transform: none;
+  }
+
+  .big-text-header {
+    font-size: 30px;
+  }
+
+  .small-text-header {
+    font-size: 12px;
+  }
+}
+
+.resume-pill {
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
+  padding: 0 16px; /* Horizontal padding */
+  height: 36px; /* Set height to 36px */
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 50px; /* Makes the pill shape */
+  font-size: 14px;
+  font-weight: bold;
   text-align: center;
+  text-decoration: none; /* Removes underline */
+  transition: transform 0.2s ease-in-out;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+.resume-icon {
+  width: 16px; /* Adjust the size of the image */
+  height: 16px;
+  margin-right: 4px;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+.images-container {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-nav ul li a {
+.small-image {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.resume-pill:hover {
+  transform: scale(1.1);
+}
+
+.small-image:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+.main-text-h1 {
+  padding: 10px;
+  padding-bottom: 0;
   color: white;
-  text-decoration: none;
-}
-
-main {
-  padding: 20px;
+  margin: 0px;
 }
 
 section {
@@ -36,50 +153,19 @@ section {
 }
 
 
-.intro-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.intro-container::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 700px 150px 150px; /* Adjust values for asymmetry */
-  border-color: transparent transparent #007bff transparent;
-  transform: rotate(10deg) translate(-20px, -40px); /* Rotate and translate */
-  z-index: -10;
-}
-
-.intro-text {
-  position: relative;
-  z-index: 1;
-  font-size: 24px;
-  font-weight: bold;
-  color: #252525;
-}
-
-
-
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: left;
+  justify-content: center;
   padding: 20px;
+  background-color: #121212;
 }
-
 
 .skill-pill {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007bff; /* Blue background */
-  color: #ffffff; /* White text */
+  color: #000000;
   border-radius: 50px; /* Makes the pill shape */
   font-size: 14px;
   font-weight: bold;
@@ -89,115 +175,124 @@ section {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-a.skill-pill:hover {
-  background-color: #3000b3; 
+.skill-pill.violet {
+  background-color: #E4CCFF;
+}
+
+.skill-pill.blue {
+  background-color: #BDE3FF;
+}
+
+a.skill-pill.violet:hover {
+  background-color: #ae67ff; 
+}
+
+a.skill-pill.blue:hover {
+  background-color: #69c1ff; 
 }
 
 
-.additional-links {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd; /* Optional: subtle border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light gray background */
-  max-width: 400px; /* Optional: limit width */
+
+
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Default for mobile */
+  gap: 16px; /* Adjust gap as needed */
+  padding: 16px;
 }
 
-.additional-links h3 {
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #333;
+@media (min-width: 1920px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for more than FullHD */
+  }
 }
 
-.link-list {
+@media (min-width: 768px) and (max-width: 1919px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for FullHD */
+  }
+}
+
+
+/* Grid Items */
+.grid-item {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: 5px; /* Space between links and dots */
-  align-items: center;
-  font-size: 14px;
+  flex-direction: column;
 }
 
-.link-list a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.link-list a:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
-.separator {
-  color: #999; /* Subtle color for the separator */
-}
-
-
-.popup-link {
-  position: relative;
-  color: blue;
-  text-decoration: none;
-}
-
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.grid-item img {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-  animation: fadeIn 0.5s ease;
+  height: auto; /* Maintain aspect ratio */
+  display: block;
 }
 
-.popup-link:focus + .popup-overlay {
+/* Info Section */
+.info {
   display: flex;
+  justify-content: space-between;
+  margin-top: 8px; /* Space between image and info section */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a.skill-pill.small{
+  font-size: 12px;
+  padding: 4px 12px;
+  border: 2px solid #121212; /* Adds a black outline */
+}
+
+.skills-title-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  align-items: center;
 }
 
-.popup-overlay .popup-content {
+
+
+
+a.contact-link {
+  color: #ffffff;
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+a.contact-link::after {
+  content: '';
   position: absolute;
-  transform: scale(0);
-  animation: scaleIn 0.5s ease forwards;
-}
-
-.popup-overlay .popup-content img {
-  max-width: 90%;
-  max-height: 90%;
-  cursor: pointer;
-}
-
-@keyframes fadeIn {
-  from {
-      background-color: rgba(0, 0, 0, 0);
-  }
-  to {
-      background-color: rgba(0, 0, 0, 0.8);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-      transform: scale(0);
-  }
-  to {
-      transform: scale(1);
-  }
-}
-
-/* Clicking anywhere in the overlay or the image closes the popup */
-.popup-overlay:focus-within {
-  display: none;
-}
-
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
+  left: 0;
   bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  width: 0; /* Start with no underline */
+  background-color: #ffffff; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition on hover */
+}
+
+a.contact-link:hover::after {
+  width: 100%; /* Underline expands fully on hover */
+}
+
+@keyframes underline-animation {
+  from {
+    width: 0; /* Start at 0% width */
+  }
+  to {
+    width: 100%; /* Expand to 100% width */
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #121212;
+  color: white;
+  text-align: left;
+  padding: 0px;
   width: 100%;
 }

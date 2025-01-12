@@ -6,93 +6,102 @@
     <title>My Static Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <h1>Tumanov Sergei personal page</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#software">Software</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Science is beautiful. My goal is to show it</h2>
-            <div class="intro-container">
-                <div class="intro-text">C++ Developer | PhD Scientist | Data processing wizard</div>
-            </div>
-        </section>
 
-        <section id="software">
-            <h2>Software</h2>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="text-header-container">
+                    <h1 class="big-text-header">Hi, I'm Sergei
+                        <div class="skills-header-container">
+                            <span class="skill-pill blue">C++ dev</span>
+                            <span class="plus-sign">+</span>
+                            <span class="skill-pill violet">PhD in Physics</span>
+                        </div>
+                    </h1>
+                    <h2 class="small-text-header">I'm making science look beautiful with code</h2>
+                </div>
+                <div class="images-container">
+                    <a href="cv.pdf" class="resume-pill" target="_blank">
+                        <img src="resume.png" alt="Resume Icon" class="resume-icon">
+                        Resume
+                    </a>
+                    <a href="mailto:tmnvsv@gmail.com">
+                        <img src="logo-email.png" alt="Email" class="small-image">
+                    </a>
+                    <a href="https://www.linkedin.com/in/sergey-tumanov" target="_blank">
+                        <img src="logo-in.png" alt="LinkedIn" class="small-image">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Sergey-Tumanov-3" target="_blank">
+                        <img src="logo-rg.png" alt="ResearchGate" class="small-image">
+                    </a>
+                </div>
+
+            </header>
+            <main>
                 <div class="skills-container">
-                    <a href="https://en.cppreference.com/w/cpp/17" class="skill-pill" target="_blank">C++17</a>
-                    <a href="https://www.boost.org/" class="skill-pill" target="_blank">Boost</a>
-                    <a href="https://opencv.org/" class="skill-pill" target="_blank">OpenCV</a>
-                    <a href="https://www.opengl.org/" class="skill-pill" target="_blank">OpenGL</a>
-                    <a href="https://learn.microsoft.com/en-us/windows/win32/api/" class="skill-pill" target="_blank">Windows API</a>
-                    <a href="https://en.wikipedia.org/wiki/User_experience_design" class="skill-pill" target="_blank">UI/UX Design</a>
-                    <a href="https://www.python.org/" class="skill-pill" target="_blank">Python</a>
-                    <a href="https://www.mathworks.com/products/matlab.html" class="skill-pill" target="_blank">MATLAB</a>
-                    <a href="https://visualstudio.microsoft.com/" class="skill-pill" target="_blank">Visual Studio</a>
+                    <a href="https://en.cppreference.com/w/cpp/17" class="skill-pill blue" target="_blank">C++17</a>
+                    <a href="https://www.boost.org/" class="skill-pill blue" target="_blank">Boost</a>
+                    <a href="https://opencv.org/" class="skill-pill blue" target="_blank">OpenCV</a>
+                    <a href="https://www.opengl.org/" class="skill-pill blue" target="_blank">OpenGL</a>
+                    <a href="https://learn.microsoft.com/en-us/windows/win32/api/" class="skill-pill blue" target="_blank">Windows API</a>
+                    <a href="https://en.wikipedia.org/wiki/User_experience_design" class="skill-pill blue" target="_blank">UI/UX Design</a>
+                    <a href="https://www.python.org/" class="skill-pill blue" target="_blank">Python</a>
+                    <a href="https://www.mathworks.com/products/matlab.html" class="skill-pill blue" target="_blank">MATLAB</a>
+                    <a href="https://visualstudio.microsoft.com/" class="skill-pill blue" target="_blank">Visual Studio</a>
+                    <a href="https://en.wikipedia.org/wiki/Electron_paramagnetic_resonance" class="skill-pill violet">EPR</a>
+                    <a href="https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy" class="skill-pill violet">FTIR</a>
+                    <a href="https://en.wikipedia.org/wiki/X-ray_diffraction" class="skill-pill violet">XRD</a>
+                    <a href="https://en.wikipedia.org/wiki/Single-molecule_magnet" class="skill-pill violet">Molecular magnetism</a>
                 </div>
                 
-                <h3>STOE X-Area</h3>
-            <p>TODO: add gifs</p>
-            <h3>Hobby projects</h3>
-        </section>
-
-        <section id="Publications">
-            <h2>Material science</h2>
-            <h3>PhD in Physics</h3>
-            <div class="skills-container">
-                <a href="https://en.wikipedia.org/wiki/Electron_paramagnetic_resonance" class="skill-pill">EPR</a>
-                <a href="https://en.wikipedia.org/wiki/Fourier-transform_infrared_spectroscopy" class="skill-pill">FTIR</a>
-                <a href="https://en.wikipedia.org/wiki/X-ray_diffraction" class="skill-pill">XRD</a>
-                <a href="https://en.wikipedia.org/wiki/Single-molecule_magnet" class="skill-pill">Molecular magnetism</a>
-            </div>
-            <div class="additional-links">
-                <h3>Additional Resources</h3>
-                <div class="link-list">
-                    <a href="https://www.nsu.ru/n/research/dissertation-committee/nsu/dissertatsii_13158/#3567518">PhD site</a>
-                    <span class="separator">·</span>
-                    <a href="Tumanov phd diploma.pdf">PhD diploma (pdf)</a>
-                    <span class="separator">·</span>
-                    <a href="phd text rus.pdf">Text (Russian, pdf)</a>
+                <h1 class="main-text-h1" style="color: black;">Projects</h1>
+                
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="gif-poly.gif" alt="Poly" style="border-radius: 15px;">
+                        <div class="info">
+                            <div class="title">Poly</div>
+                            <div class="skills-title-container">
+                                <a href="https://en.cppreference.com/w/cpp/17" class="skill-pill small blue" target="_blank">C++17</a>
+                                <a href="https://www.boost.org/" class="skill-pill small blue" target="_blank">Boost</a>
+                                <a href="https://en.wikipedia.org/wiki/X-ray_diffraction" class="skill-pill small violet">XRD</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <img src="gif-mask.gif" alt="Mask" style="border-radius: 15px;">
+                        <div class="info">
+                            <div class="title">Mask</div>
+                            <div class="skills-title-container">
+                                <a href="https://en.cppreference.com/w/cpp/17" class="skill-pill small blue" target="_blank">C++17</a>
+                                <a href="https://www.boost.org/" class="skill-pill small blue" target="_blank">Boost</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <img src="gif-xview.gif" alt="X-View" style="border-radius: 15px;">
+                        <div class="info">
+                            <div class="title">X-View</div>
+                            <div class="skills-title-container">
+                                <a href="https://en.cppreference.com/w/cpp/17" class="skill-pill small blue" target="_blank">C++17</a>
+                                <a href="https://www.boost.org/" class="skill-pill small blue" target="_blank">Boost</a>
+                                <a href="https://opencv.org/" class="skill-pill small blue" target="_blank">OpenCV</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <h3>Publications</h3>
-            <p><a href="https://www.researchgate.net/profile/Sergey-Tumanov-3/publications">Research Gate</a></p>
-        </section>
-
-        <a href="#popup" class="popup-link">Click here to see GIF</a>
-
-        <div id="popup" class="popup-overlay" tabindex="-1">
-            <a href="#" class="popup-content">
-                <img src="mygif.gif" alt="Popup GIF">
-            </a>
+            </main>
         </div>
-
-
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section of the website.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section of the website.</p>
-        </section>
-        <img src="image.png">
-        <p>hey</p>
-
-
-        
-    </main>
-    <footer>
-        <p>&copy; 2024 My Static Site</p>
-    </footer>
+        <footer>
+            <h1 class="main-text-h1">Contact</h1>
+            <p><a href="mailto:tmnvsv@gmail.com" class = "contact-link">tmnvsv@gmail.com</a></p>
+            <p><a href="https://www.linkedin.com/in/sergey-tumanov" class = "contact-link" target="_blank" >Linked In</a></p>
+            <p><a href="https://www.researchgate.net/profile/Sergey-Tumanov-3" class = "contact-link" target="_blank" >Publications</a></p>
+        </footer>
+    </div>
 </body>
+
 </html>
