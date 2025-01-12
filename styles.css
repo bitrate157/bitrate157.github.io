@@ -37,12 +37,12 @@ html, body {
 /* Text container */
 .text-header-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: left;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   color: white;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 /* Styling for text lines */
@@ -63,9 +63,7 @@ html, body {
   align-items: center; /* Centers "+" sign vertically between the pills */
   justify-content: flex-start;
   gap: 5px;
-  margin-left: 10px; /* Adds some space between the text and pills */
   position: relative;
-  top: -50px; /* Moves the pills 50px up */
 }
 
 /* Styling for "+" sign */
@@ -77,13 +75,14 @@ html, body {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .text-header-container {
-    top: 100px;
-    left: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
     transform: none;
   }
 
   .big-text-header {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .small-text-header {
@@ -120,6 +119,13 @@ html, body {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .images-container {
+    top: 10px;
+    bottom: auto;
+  }
+}
+
 .small-image {
   width: 36px;
   height: 36px;
@@ -139,9 +145,8 @@ html, body {
 
 
 
-
-
-.main-text-h1 {
+.main-text-h2 {
+  font-size: 36px;
   padding: 10px;
   padding-bottom: 0;
   color: white;
@@ -254,17 +259,25 @@ a.skill-pill.small{
 }
 
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
+li {
+  margin: 5px 0;
+}
 
-a.contact-link {
+.contact-link {
   color: #ffffff;
   text-decoration: none; /* Remove default underline */
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding: 4px;
+  padding-left: 10px;
 }
 
-a.contact-link::after {
+.contact-link::after {
   content: '';
   position: absolute;
   left: 0;
@@ -275,7 +288,7 @@ a.contact-link::after {
   transition: width 0.3s ease; /* Smooth transition on hover */
 }
 
-a.contact-link:hover::after {
+.contact-link:hover::after {
   width: 100%; /* Underline expands fully on hover */
 }
 
