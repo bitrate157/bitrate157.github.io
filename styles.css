@@ -197,8 +197,10 @@ a.skill-pill.blue:hover {
 }
 
 
-
-
+.projects-container {
+  max-width: 1500px;
+  margin: 0 auto; /* Center the container horizontally */
+}
 
 /* Grid Container */
 .grid-container {
@@ -209,8 +211,12 @@ a.skill-pill.blue:hover {
 }
 
 @media (min-width: 1920px) {
+  .projects-container {
+    max-width: 1500px;
+    margin: 0 auto; /* Center the container horizontally */
+  }
   .grid-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for more than FullHD */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns for more than FullHD */
   }
 }
 
@@ -232,6 +238,62 @@ a.skill-pill.blue:hover {
   height: auto; /* Maintain aspect ratio */
   display: block;
 }
+
+
+.gif-container {
+  position: relative;
+  display: inline-block;
+}
+
+.gif-image {
+  border-radius: 15px;
+  width: 100%; /* Adjust based on your requirement */
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  border-radius: 15px;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Only the right half */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.gif-container:hover .overlay {
+  opacity: 1;
+}
+
+.gif-text {
+  color: rgb(255, 0, 0);
+  font-family: monospace;
+}
+
+.description-text {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-align: left;
+  margin: 0 auto;
+  width: 80%; /* Adjust width if necessary */
+  line-height: 1.5; /* Optional: Improve readability */
+}
+
+.gif-text-header {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  margin: 0 auto;
+  width: 80%; /* Adjust width if necessary */
+}
+
 
 /* Info Section */
 .info {
